@@ -1,4 +1,4 @@
-# QueueLess
+# ⏳ QueueLess
 
 > No more standing in line — check in remotely, track your position live, get a wait estimate that actually adapts.
 
