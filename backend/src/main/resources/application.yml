@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: queueless
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:queueless}
+    username: ${DB_USERNAME:queueless}
+    password: ${DB_PASSWORD:queueless}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-this-to-a-long-random-secret-in-production-please-32bytes-min}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  seed-demo-data: ${SEED_DEMO_DATA:true}
+  ai:
+    # Disabled by default so the app works with zero configuration and no API cost -
+    # the daily insight panel falls back to a rule-based summary. Set both of these
+    # (plus a real key) to upgrade it to genuine LLM-generated prose.
+    enabled: ${AI_INSIGHTS_ENABLED:false}
+    anthropic-api-key: ${ANTHROPIC_API_KEY:}
+    model: ${AI_INSIGHTS_MODEL:claude-haiku-4-5-20251001}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+logging:
+  level:
+    com.pavithra.queueless: INFO

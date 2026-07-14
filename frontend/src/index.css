@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #152321;
+}
+
+::selection {
+  background: #F5A623;
+  color: #12201E;
+}
+
+.tabular-nums {
+  font-family: 'Space Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* subtle perforation effect used on ticket cards */
+.perforated {
+  position: relative;
+}
+
+.perforated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 96px;
+  width: 0;
+  border-left: 2px dashed rgba(244, 239, 228, 0.18);
+}
+
+@media (max-width: 640px) {
+  .perforated::before {
+    display: none;
+  }
+}
