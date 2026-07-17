@@ -1,6 +1,5 @@
 # ⏳QueueLess
-
-> No more standing in line — check in remotely, track your position live, get a wait estimate that actually adapts.
+No more standing in line — check in remotely, track your position live, get a wait estimate that actually adapts.
 
 Live queue management with real-time wait-time estimation. Check in to a business remotely,
 watch your position update live, and get an ETA that adapts to how the queue is actually moving —
