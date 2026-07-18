@@ -7,7 +7,6 @@ not a static number.
 
 **GitHub topics:** `spring-boot` `java` `react` `typescript` `websocket` `redis` `postgresql` `jwt-authentication` `spring-security` `real-time` `material-ui` `zustand` `docker` `rest-api` `full-stack`
 
-
 ## Why this exists
 
 Standing in physical lines at clinics, salons, and government offices wastes time that could be
